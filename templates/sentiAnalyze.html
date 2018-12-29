@@ -1,0 +1,28 @@
+<html>
+<head>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+		th, td{
+			border: 1px solid;
+			padding: 0.5em;
+		}
+	</style>
+</head>
+<body>
+  <h1 align="center">Twitter Sentiment Analysis!</h1>
+  <table width="500" align="center">
+	<tr>
+		<th>Tweet</th>
+		<th>Polarity [-1.0, 1.0]</th>
+	</tr>
+	{% for tweet, polarity in t_dict.items() %}
+	<tr>
+		<td>{{tweet}}</td>
+		<th>{{polarity}}</th>
+	</tr>
+	{% endfor %}
+  </table>
+</body>
+</html>
